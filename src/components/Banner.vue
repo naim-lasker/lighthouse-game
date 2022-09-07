@@ -1,6 +1,13 @@
 <template>
-  <div class="hello">
-    <h1>{{ msg }}</h1>
+  <div>
+    <img alt="Banner" src="../assets/logo.png">
+
+    <div>
+      <h2>Lorem Ipsum</h2>
+      <h4>Lorem Ipsum</h4>
+      <p>Lorem Ipsum</p>
+      <button>Lorem</button>
+    </div>
   </div>
 </template>
 
@@ -13,20 +20,7 @@ export default {
 }
 </script>
 
-<!-- Add "scoped" attribute to limit CSS to this component only -->
-<style scoped>
-h3 {
-  margin: 40px 0 0;
-}
-ul {
-  list-style-type: none;
-  padding: 0;
-}
-li {
-  display: inline-block;
-  margin: 0 10px;
-}
-a {
-  color: #42b983;
-}
+
+<style scoped lang="scss">
+  // @import "./styles/_variables.scss";
 </style>
