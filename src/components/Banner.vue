@@ -1,13 +1,6 @@
 <template>
   <div>
-    <img alt="Banner" src="../assets/logo.png">
-
-    <div>
-      <h2>Lorem Ipsum</h2>
-      <h4>Lorem Ipsum</h4>
-      <p>Lorem Ipsum</p>
-      <button>Lorem</button>
-    </div>
+    <img class="img-fluid" src="../assets/images/banner.png" alt="Banner">
   </div>
 </template>
 
@@ -19,8 +12,3 @@ export default {
   }
 }
 </script>
-
-
-<style scoped lang="scss">
-  // @import "./styles/_variables.scss";
-</style>

@@ -1,32 +1,64 @@
 <template>
-  <div class="hello">
-    <h1>{{ msg }}</h1>
+  <div class="d-flex px-3">
+    <div>
+      Icons
+    </div>
+
+    <div>
+        <div role="button" :class="`${item.maintained ? 'feature-img-container' : ''} position-relative mb-3`" v-for="item in images" :key="item.id">
+          <img :src="getImgUrl(item.url)" :alt="`Featurss${item.id}`">
+          <button v-if="item.maintained" class="feature-btn">Maintained</button>
+        </div>
+    </div>
   </div>
 </template>
 
 <script>
 export default {
   name: 'HelloWorld',
-  props: {
-    msg: String
+  data() {
+    return {
+      images: [
+        { id: 1, url: "feature1.png", maintained: true },
+        { id: 2, url: "feature2.png", maintained: false },
+        { id: 3, url: "feature3.png", maintained: false },
+        { id: 4, url: "feature4.png", maintained: false },
+      ],
+    }
+  },
+  methods: {
+    getImgUrl: function (imagePath) {
+      return require('@/assets/images/features/' + imagePath);
+    }
   }
 }
 </script>
 
-<!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
-h3 {
-  margin: 40px 0 0;
+.feature-img-container {
+  transition: 0.3s ease-in all;
 }
-ul {
-  list-style-type: none;
-  padding: 0;
+
+.feature-img-container:before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  background-color: rgba(0, 0, 0, 0.7);
 }
-li {
-  display: inline-block;
-  margin: 0 10px;
-}
-a {
-  color: #42b983;
+
+.feature-btn {
+  background-color: rgb(0, 0, 0, 0.6);
+  border-radius: 26px;
+  padding: 10px 50px;
+  color: #bda8a8;
+  border: 0;
+  z-index: 3;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
 </style>
