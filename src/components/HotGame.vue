@@ -14,7 +14,7 @@ import 'vue3-carousel/dist/carousel.css';
 import { Carousel, Slide } from 'vue3-carousel';
 
 export default {
-  name: 'HelloWorld',
+  name: 'HotGame',
   components: {
     Carousel,
     Slide,
@@ -42,13 +42,25 @@ export default {
           300: {
             itemsToShow: 1.5,
           },
+          320: {
+            itemsToShow: 2,
+          },
+          360: {
+            itemsToShow: 2.3,
+          },
           400: {
             itemsToShow: 2.5,
           },
-          500: {
+          460: {
+            itemsToShow: 2.9,
+          },
+          520: {
             itemsToShow: 3.5,
           },
           600: {
+            itemsToShow: 3.5,
+          },
+          670: {
             itemsToShow: 4.5,
           },
         },

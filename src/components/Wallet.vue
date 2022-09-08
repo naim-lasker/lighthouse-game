@@ -1,11 +1,11 @@
 <template>
   <div class="d-flex justify-content-between px-3 py-3">
     <div class="d-flex">
-      <div class="mr-3">
+      <div class="mr-3 wallet-icon-container">
         <img src="../assets/images/wallet.png" alt="Wallet">
       </div>
 
-      <div class="wallet-left">
+      <div class="wallet-left mb-sm-0 mb-4">
         <div class="d-flex">
           <h5 class="m-0 title">KEN</h5>
           <img class="mx-2" src="../assets/images/crown.png" alt="Crown">
@@ -18,11 +18,11 @@
       </div>
     </div>
 
-    <div class="wallet-center">
+    <div class="wallet-center d-none d-sm-block">
       <img src="../assets/images/line.png" alt="Line">
     </div>
     
-    <div class="wallet-right">
+    <div class="wallet-right ml-3 ml-sm-0">
       <p class="m-0">
         <img src="../assets/images/sound.png" alt="Wallet">
         <span class="ml-2">:Dragon Boat Festival holiday!holiday!holiday!holiday!Drago</span>
@@ -33,10 +33,7 @@
 
 <script>
 export default {
-  name: 'HelloWorld',
-  props: {
-    msg: String
-  }
+  name: 'WalletComp',
 }
 </script>
 
@@ -55,4 +52,30 @@ export default {
   color: #979797;
   word-wrap: break-word;
 }
+
+@media screen and (max-width: 480px) {
+    .wallet-icon-container img {
+      width: 30px;
+    }
+    .wallet-left .title, .wallet-left h5 {
+      font-size: 13px;
+    }
+    .wallet-right {
+      font-size: 13px;
+      min-width: 150px;
+    }
+  }
+
+  @media screen and (max-width: 380px) {
+    .wallet-icon-container img {
+      width: 20px;
+    }
+    .wallet-left .title, .wallet-left h5 {
+      font-size: 12px;
+    }
+    .wallet-right {
+      font-size: 12px;
+      min-width: 120px;
+    }
+  }
 </style>
