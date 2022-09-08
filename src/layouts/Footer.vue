@@ -1,10 +1,10 @@
 <template>
-  <div class="footer d-flex justify-content-between align-items-center px-4 py-3 mb-4">
-    <img alt="Home" src="../assets/images/footer/home.png">
-    <img alt="Gift" src="../assets/images/footer/gift.png">
-    <img alt="Money" src="../assets/images/footer/money.png">
-    <img alt="Chat" src="../assets/images/footer/chat.png">
-    <img alt="User" src="../assets/images/footer/user.png">
+  <div class="footer d-flex justify-content-between align-items-center px-5 py-3 mb-4">
+    <img role="button" src="../assets/images/footer/home.png" alt="Home">
+    <img role="button" src="../assets/images/footer/gift.png" alt="Gift">
+    <img role="button" src="../assets/images/footer/money.png" alt="Money">
+    <img role="button" src="../assets/images/footer/chat.png" alt="Chat">
+    <img role="button" src="../assets/images/footer/user.png" alt="User">
   </div>
 </template>
 
@@ -16,6 +16,8 @@ export default {
 
 <style scoped>
   .footer {
+    border-top-left-radius: 15px;
+    border-top-right-radius: 10px;
     background-color: #1A1A1A;
   }
 </style>

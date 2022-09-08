@@ -1,8 +1,8 @@
 <template>
   <div class="py-1 d-flex justify-content-between align-items-center mx-4">
-    <img alt="Bell" src="../assets/images/bell.png">
-    <img alt="Logo" src="../assets/images/logo.png">
-    <img alt="Menu" src="../assets/images/menu.png">
+    <img role="button" src="../assets/images/bell.png" alt="Bell">
+    <img role="button" src="../assets/images/logo.png" alt="Logo">
+    <img role="button" src="../assets/images/menu.png" alt="Menu">
   </div>
 </template>
 

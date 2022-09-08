@@ -1,12 +1,14 @@
 <template>
   <div class="d-flex px-3">
-    <div>
-      Icons
+    <div class="mr-3 feature-left">
+      <div role="button" :class="`${item.maintained ? 'feature-img-container' : ''} position-relative mb-3`" v-for="item in icons" :key="item.id">
+        <img class="img-fluid" :src="getImgUrl(item.url)" :alt="`Featurss${item.id}`" :title="item.name">
+      </div>
     </div>
 
     <div>
         <div role="button" :class="`${item.maintained ? 'feature-img-container' : ''} position-relative mb-3`" v-for="item in images" :key="item.id">
-          <img :src="getImgUrl(item.url)" :alt="`Featurss${item.id}`">
+          <img class="img-fluid" :src="getImgUrl(item.url)" :alt="`Featurss${item.id}`">
           <button v-if="item.maintained" class="feature-btn">Maintained</button>
         </div>
     </div>
@@ -18,6 +20,14 @@ export default {
   name: 'HelloWorld',
   data() {
     return {
+      icons: [
+        { id: 1, name: 'Used', url: "used.png" },
+        { id: 2, name: 'Live', url: "live.png" },
+        { id: 3, name: 'Sport', url: "sport.png" },
+        { id: 4, name: 'Lottery', url: "lottery.png" },
+        { id: 5, name: 'Poker', url: "poker.png" },
+        { id: 6, name: 'Game', url: "game.png" },
+      ],
       images: [
         { id: 1, url: "feature1.png", maintained: true },
         { id: 2, url: "feature2.png", maintained: false },
@@ -29,7 +39,7 @@ export default {
   methods: {
     getImgUrl: function (imagePath) {
       return require('@/assets/images/features/' + imagePath);
-    }
+    },
   }
 }
 </script>
@@ -60,5 +70,11 @@ export default {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
+}
+
+@media screen and (max-width: 500px) {
+  .feature-left img {
+    width: 90%;
+  }
 }
 </style>
